@@ -90,6 +90,7 @@ if(USE_CUDA)
   )
   set_property(
     TARGET device
+    APPEND
     PROPERTY CUDA_ARCHITECTURES
     60 # P100
     70 # V100
