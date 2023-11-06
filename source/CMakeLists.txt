@@ -88,9 +88,6 @@ if(USE_CUDA)
     cublas 
     cufft
   )
-  set_property(
-    TARGET device
-  )
 elseif(USE_ROCM)
   target_link_libraries(
     device 

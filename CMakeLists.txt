@@ -241,9 +241,6 @@ if(USE_CUDA OR USE_CUSOLVER_LCAO)
     )
   endif()
   enable_language(CUDA)
-  set_property(
-    TARGET ${ABACUS_BIN_NAME}
-  )
   target_link_libraries(${ABACUS_BIN_NAME}
     -lcudart
     -lnvToolsExt
