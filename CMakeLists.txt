@@ -254,6 +254,12 @@ if(USE_CUDA OR USE_CUSOLVER_LCAO)
     endif()
   endif()
   enable_language(CUDA)
+  # ${ABACUS_BIN_NAME} is added before CUDA is enabled
+  set_property(
+    TARGET ${ABACUS_BIN_NAME}
+    PROPERTY CUDA_ARCHITECTURES
+    ${CMAKE_CUDA_ARCHITECTURES}
+  )
   target_link_libraries(${ABACUS_BIN_NAME}
     -lcudart
     -lnvToolsExt
