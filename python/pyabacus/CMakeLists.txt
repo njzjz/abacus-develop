@@ -25,4 +25,4 @@ python_add_library(_core MODULE ${_sources} WITH_SOABI)
 target_link_libraries(_core PRIVATE pybind11::headers)
 target_compile_definitions(_core PRIVATE VERSION_INFO=${PROJECT_VERSION})
 
-install(TARGETS _core DESTINATION pyabacus)
+install(TARGETS _core DESTINATION ${SKBUILD_PLATLIB_DIR}/pyabacus)
